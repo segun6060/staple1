@@ -5454,3 +5454,12 @@ ul.login-modal-tab-nav li a:hover {
     position: inherit;
     top: 10px;
 }
+.icon img{
+    display: inline;
+}
+.abtall img{
+    margin-top: 6px;
+}
+.moreofspace{
+    padding-bottom: 22px;
+}

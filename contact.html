@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Staple Travel Center</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="booking, travel, holiday">
+	<meta name="author" content="segun">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	<!-- CSS Plugins -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">	
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/component.css" rel="stylesheet">
+	
+	<!-- CSS Font Icons -->
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+	<link rel="stylesheet" href="css/ionicons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flaticon-streamline-outline.css">
+	<link rel="stylesheet" href="css/around-the-world-icons.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- CSS Custom -->
+	<link href="css/style1.css" rel="stylesheet">
+	
+
+</head>
+
+<body data-pinterest-extension-installed="ff1.37.9" class="">
+
+	<div style="display: none;" id="introLoader" class="introLoading introLoader counterLoader theme-style-01"><div style="display: block;" class="counterLoaderBox">   <span id="counterLoader" class="counterLoader number">97</span><span class="counterLoader percent">%</span></div></div>
+	
+	<!-- BEGIN # MODAL LOGIN -->
+	<div class="modal fade modal-login modal-border-transparent" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<button type="button" class="btn btn-close close" data-dismiss="modal" aria-label="Close">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</button>
+				
+				<div class="clear"></div>
+				
+				<!-- Begin # DIV Form -->
+				<div id="modal-login-form-wrapper">
+					
+					<!-- Begin # Login Form -->
+					<form id="login-form">
+					
+						<div class="modal-body pb-10">
+					
+							<h4 class="text-center mb-15">Sign-in</h4>
+						
+							<button class="btn btn-facebook btn-block">Sign-in with Facebook</button>
+							
+							<div class="modal-seperator mb-40">
+								<span>or</span>
+							</div>
+							
+							<div class="form-group mb-0"> 
+								<input id="login_username" class="form-control mb-5" placeholder="username" type="text"> 
+							</div>
+							<div class="form-group mb-0"> 
+								<input id="login_password" class="form-control mb-5" placeholder="password" type="password"> 
+							</div>
+			
+							<div class="form-group mb-0 mt-10">
+								<div class="row gap-5">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="checkbox-block font-icon-checkbox"> 
+											<input id="remember_me_checkbox" name="remember_me_checkbox" class="checkbox" value="First Choice" type="checkbox"> 
+											<label class="" for="remember_me_checkbox">remember</label>
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-6 text-right"> 
+										<button id="login_lost_btn" type="button" class="btn btn-link">forgot pass?</button>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+						
+						<div class="modal-footer pt-25 pb-5">
+						
+							<div class="row gap-10">
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-primary btn-block">Sign-in</button>
+								</div>
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-danger btn-block" data-dismiss="modal" aria-label="Close">Cancel</button>
+								</div>
+							</div>
+							<div class="text-left">
+								No account? 
+								<button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+							</div>
+							
+						</div>
+					</form>
+					<!-- End # Login Form -->
+								
+					<!-- Begin | Lost Password Form -->
+					<form id="lost-form" style="display:none;">
+						<div class="modal-body pb-10">
+							
+							<h4 class="text-center mb-15">Forgot password</h4>
+							
+							<div class="form-group mb-0"> 
+								<input id="lost_email" class="form-control mb-5" placeholder="Enter Your Email" type="text">
+							</div>
+							
+							<div class="text-center">
+								<button id="lost_login_btn" type="button" class="btn btn-link">Sign-in</button> or 
+								<button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+							</div>
+							
+						</div>
+						
+						<div class="modal-footer pt-25 pb-5">
+							
+							<div class="row gap-10">
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-primary btn-block">Submit</button>
+								</div>
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-danger btn-block" data-dismiss="modal" aria-label="Close">Cancel</button>
+								</div>
+							</div>
+							
+						</div>
+						
+					</form>
+					<!-- End | Lost Password Form -->
+								
+					<!-- Begin | Register Form -->
+					<form id="register-form" style="display:none;">
+					
+						<div class="modal-body pb-20">
+
+							<h4 class="text-center mb-15">Register</h4>
+							
+							<button class="btn btn-facebook btn-block">Register with Facebook</button>
+							
+							<div class="modal-seperator mb-40">
+								<span>or</span>
+							</div>
+							
+							<div class="form-group mb-0"> 
+								<input id="register_username" class="form-control mb-5" placeholder="Username" type="text"> 
+							</div>
+							
+							<div class="form-group mb-0"> 
+								<input id="register_email" class="form-control mb-5" placeholder="Email" type="email">
+							</div>
+							<div class="form-group mb-0"> 
+								<input id="register_referral" class="form-control mb-5" placeholder="Referral Id" type="text"> 
+							</div>
+							
+							<div class="form-group mb-0"> 
+								<input id="register_password" class="form-control mb-5" placeholder="Password" type="password">
+							</div>
+							
+							<div class="form-group mb-0"> 
+								<input id="register_password_confirm" class="form-control mb-5" placeholder="Confirm Password" type="password">
+							</div>
+
+						</div>
+							
+						<div class="modal-footer pt-25 pb-5">
+						
+							<div class="row gap-10">
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-primary btn-block">Register</button>
+								</div>
+								<div class="col-xs-6 col-sm-6 mb-10">
+									<button type="submit" class="btn btn-danger btn-block" data-dismiss="modal" aria-label="Close">Cancel</button>
+								</div>
+							</div>
+							
+							<div class="text-left">
+									Already have account? <button id="register_login_btn" type="button" class="btn btn-link">Sign-in</button>
+							</div>
+							
+						</div>
+							
+					</form>
+					<!-- End | Register Form -->
+								
+				</div>
+				<!-- End # DIV Form -->
+								
+			</div>
+		</div>
+	</div>
+	<!-- END # MODAL LOGIN -->
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper colored-navbar-brand">
+
+		<!-- start Header -->
+		<header id="header" class="overflow-x-hidden-xss">
+	  
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top with-slicknav">
+				
+				<div class="container">
+						
+					<div class="navbar-header">
+						<a class="navbar-brand" href="index.html">STAPLE</a>
+					</div>
+						
+					<div id="navbar" class="collapse navbar-collapse navbar-arrow pull-left">
+					
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="about.html">About us</a>
+							</li>
+							<li class="mega-menu">
+								<a href="contact.html">Contact</a>
+							</li>
+							
+						</ul>
+					
+					</div><!--/.nav-collapse -->
+				
+					<div class="pull-right">
+					
+						<div class="navbar-mini">
+							<ul class="clearfix">
+								<li class="dropdown bt-dropdown-click">
+									<a id="currency-dropdown" class="dropdown-toggle"  role="button" aria-expanded="false">My Point : 455</a>
+								</li>
+								<li class="dropdown bt-dropdown-click">
+									<a id="language-dropdown" class="dropdown-toggle" role="button" aria-expanded="false"> My Referals</a>
+								</li>
+								<li class="user-action">
+									<a data-toggle="modal" href="#loginModal" class="btn btn-primary btn-inverse">Sign up/in</a> 
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+				
+				</div>
+				
+			</nav>
+			<!-- end Navbar (Header) -->
+
+		</header>
+		<div class="clear"></div>
+		
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+
+					<div class="row">
+					
+						<div class="col-xs-12 col-sm-8">
+							<ol class="breadcrumb">
+								<li><a href="index.html">Home</a></li>
+								<li class="active">Contact Us</li>
+							</ol>
+						</div>
+						
+						<div class="col-xs-12 col-sm-4 hidden-xs">
+							<p class="hot-line"> <i class="fa fa-phone"></i> Hot Line: 1-222-33658</p>
+						</div>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="full-contact-map-wrapper map-wrapper">
+				<div id="contact-map" class="full-contact-map"></div>
+				<div class="absolute-contact-info">
+					<div class="container">
+						<div class="content clearfix">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<div class="item">
+										<i class="fa fa-map-marker"></i> Suite 109 Jabi F.C.T Abuja 
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="item">
+										<i class="fa fa-phone"></i> (+234) 806-496-0838 
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="pull-right xs-pull-left">
+									<div class="item more-pl">
+										<i class="fa fa-envelope"></i> <a href="#">Inquiries@stapletc.com </a>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container mt-50 mb-50">
+			
+				<div class="section-title-3">
+					<h2>Contact Us</h2>
+					<p class="font500">We love to we hear from you. Keep in touch</p>
+				</div>
+				
+				<div class="clear mb-10"></div>
+				
+				<form novalidate="novalidate" class="contact-form" id="contactForm" method="get" action="#">
+				
+					<div class="row">
+					
+						<div class="col-sm-6">
+						
+							<div class="form-group mb-25">
+								<input class="form-control" placeholder="Your Name" name="yourname" type="text">
+							</div>
+
+							<div class="form-group mb-25">
+								<input class="form-control" placeholder="Email Address" name="contactEmail" type="email">
+							</div>
+							
+							<div class="form-group mb-25">
+								<input class="form-control" placeholder="Your Subject" name="subject" type="text">
+							</div>
+							
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Phone Number" name="Phone" type="text">
+							</div>
+							
+						</div>
+						
+						<div class="col-sm-6">
+						
+							<div class="form-group">
+								<textarea class="form-control" rows="8" placeholder="Message" name="contactMessage"></textarea>
+							</div>
+							
+						</div>
+						
+					</div>
+
+					<div class="clear"></div>
+					
+					<div class="pull-right">
+						<input class="btn btn-danger" value="Submit" type="submit">
+					</div>
+				
+				</form>
+				
+				<div class="clear"></div>
+				
+			</div>
+			
+			<div class="clear"></div>
+
+		<footer class="main-footer">
+			
+				<div class="container">
+				
+					<div class="row">
+					
+						<div class="col-sm-12 col-sm-5 col-md-6">
+						
+							<div class="row">
+								<div class="footer-about col-sm-10 col-md-8">
+									<div class="footer-logo">
+										<a href="#home">STAPLE TAVEL CENTER</a>
+									</div>
+								
+								<p class="about-us-footer">is a dynamic, well versatile company. It is a center relating to every aspect of travel.</p>
+								
+								<p class="copy-right font12">© Copyright 2016 By Segun Oyebode.</p>
+								
+								</div>
+							</div>
+						
+						</div>
+						
+						<div class="col-sm-12 col-sm-7 col-md-6">
+
+							<div class="row gap-20">
+							
+								<div class="col-xss-6 col-xs-4 col-sm-4 mt-30-xs">
+								
+									<h4 class="footer-title">Company</h4>
+									
+									<ul class="menu-footer">
+										<li><a href="#">Press release</a></li>
+										<li><a href="#">Career center</a></li>
+										<li><a href="#">Terms</a></li>
+										<li><a href="#">Privacy</a></li>
+									</ul>
+									
+								</div>
+								
+								<div class="col-xss-6 col-xs-4 col-sm-4 mt-30-xs">
+								
+									<h4 class="footer-title">Discover</h4>
+									
+									<ul class="menu-footer">
+										<li><a href="#">Staple Network</a></li>
+									</ul>
+									
+								</div>
+								
+								<div class="col-xss-12 col-xs-4 col-sm-4 mt-30-xs">
+								
+									<h4 class="footer-title">Socials</h4>
+									
+									<ul class="menu-footer for-social">
+										<li><a href="#"><i class="fa fa-facebook mr-5"></i> Facebook</a></li>
+										<li><a href="#"><i class="fa fa-twitter mr-5"></i> Twitter</a></li>
+										<li><a href="#"><i class="fa fa-google-plus mr-5"></i> Google Plus</a></li>
+									</ul>
+									
+								</div>
+							
+							</div>
+						
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</footer>
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+
+ <!-- start Back To Top -->
+<div style="display: none;" id="back-to-top">
+   <a href="#"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+</div>
+<!-- end Back To Top -->
+
+ 
+<!-- jQuery Cores -->
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.js"></script>
+
+<!-- Bootstrap Js -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- Plugins - serveral jquery plugins that use in this template -->
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<!-- Custom js codes for plugins -->
+<script type="text/javascript" src="js/customs.js"></script>
+
+<!-- Date Piacker -->
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/customs-datepicker.js"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/customs-contact-map.js"></script>
+
+
+</body>
+</html>
